@@ -80,9 +80,9 @@ class ROICoordinateCalculator:
             goal_pose = PoseStamped()
             goal_pose.header.stamp = current_time
             goal_pose.header.frame_id = "map"
-            goal_pose.pose.position.x = map_point.point.x
-            goal_pose.pose.position.y = map_point.point.y
-            goal_pose.pose.position.z = map_point.point.z
+            # goal_pose.pose.position.x = map_point.point.x
+            # goal_pose.pose.position.y = map_point.point.y
+            # goal_pose.pose.position.z = map_point.point.z
             goal_pose.pose.orientation.w = 1.0
 
             rospy.loginfo("Target position successfully calculated by template: x={}, y={}, z={}".format(
@@ -92,9 +92,12 @@ class ROICoordinateCalculator:
             ))
 
             # Publish the goal pose
+            goal_pose.pose.position.x = 0
+            goal_pose.pose.position.y = 0
+            goal_pose.pose.position.z = 0
             self.goal_pub.publish(goal_pose)
             rospy.loginfo("Goal pose published successfully.")
-            self.calculated_target_pub.publish(goal_pose)
+            # self.calculated_target_pub.publish(goal_pose)
             # Publish the goal name to substitute the goal name from the last goal
             # goal_name_msg = String()
             # goal_name_msg.data = "/done"
