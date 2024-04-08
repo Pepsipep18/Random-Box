@@ -1,0 +1,15 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/lando/ME5413_Final/devel/lib/python3/dist-packages",
+        "/home/lando/.ws_livox/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/lando/ME5413_Final/devel/lib/python3/dist-packages",
+        "/home/lando/.ws_livox/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "cmath": "cpp"
+    }
+}
